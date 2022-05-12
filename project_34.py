@@ -2,7 +2,7 @@
 # Сформировать файл содержащий сумму многочленов.
 one_file = open('task_34_1.txt', 'w')
 two_file = open('task_34_2.txt', 'w')
-example_1 = '2 * x ^ 5 + 21 * x ^ 3 + 24 = 0'
+example_1 = '2 * x ^ 2 + 21 * x ^ 6 + 24 = 0'
 example_2 = '34 * x ^ 2 + 48 * x ^ 6 + 23 = 0'
 one_file.write(example_1)
 two_file.write(example_2)
