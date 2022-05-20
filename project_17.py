@@ -31,6 +31,8 @@ with open("file.txt") as file:
     print()
     print(int_number)
 
+
+
 # 2 вариант
 from dataclasses import replace
 
