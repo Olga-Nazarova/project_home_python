@@ -23,3 +23,9 @@ def get_dict(n):
     return {x: 3 * x + 1 for x in range(1, n+1)}
 print(get_dict(n))
 
+
+#2 вариант
+
+number = int(input('Введите число: '))
+dictionary = {n:3*n+1 for n in range(1,number+1)}
+print(dictionary)

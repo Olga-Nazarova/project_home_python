@@ -20,6 +20,7 @@ while True:
 for i in range(-x, x + 1):
     print(i, end=' ')
 
+
 my_file = open("file.txt", 'w+')
 my_file.write(f'{str(randint(1, 6))} \n')
 my_file.write(f'{str(randint(1, 6))} \n')
@@ -29,3 +30,25 @@ with open("file.txt") as file:
     int_number = file.read()
     print()
     print(int_number)
+
+# 2 вариант
+from dataclasses import replace
+
+n = int(input('Введите натуральное положительное число \n'))
+li = [x for x in range(-n,n+1)]
+print(li)
+
+with open('file.txt','w') as data:
+    data.write('0\n')
+    data.write('1\n')
+
+path = 'file.txt'
+data = open(path,'r')
+res = 1
+for line in data:
+    number = line.replace('\n','')
+    number = int(number)
+    num_1 = li[number]
+    res = res*num_1
+print('Произведение элементов на указанных позициях =', res)
+data.close()

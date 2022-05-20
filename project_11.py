@@ -20,3 +20,7 @@ print(a)
 for i in list(range(n - 1)):
     a *= -3
     print(a)
+
+
+# 2 вариант
+print([3**n if n%2==0 else -3**n for n in range(int(input('Введите количество членов последовательности: ')))])

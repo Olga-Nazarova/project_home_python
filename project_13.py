@@ -28,3 +28,10 @@ for first in range(len(s) - len(n) + 1):
     if s[first:first+len(n)] == n:
         t += 1
 print(t)
+
+
+# 2 вариант
+str_1 = input('Введите первую строку: ')
+str_2 = input('Введите вторую строку: ')
+#lambda x: x == str_1.count(str_2)
+print(str_1.count(str_2))
