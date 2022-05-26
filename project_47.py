@@ -60,7 +60,7 @@ def delete_string(string_num):
         f.truncate()
 
 def remove_member():
-    surname = input("Введите фамилию для удаления: ").capitalize()
+    surname = input("Введите фамилию для удаления контакта: ").capitalize()
     file = open('guide.cvs')
     content = file.readlines()
     count = 0
@@ -70,13 +70,13 @@ def remove_member():
             break
         count += 1
     file.close()
-    print('Контакт удалён')
+    print('Контакт полностью удалён')
 
 
 while True:
     selector = choice()
     if selector == 1:
-        print("Выбрано новый контакт")
+        print("Выбрано добавить новый контакт")
         add_member()
     elif selector == 2:
         print("Выбрано найти контакт")
