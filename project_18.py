@@ -12,7 +12,7 @@ print ("Перетасовка : " +  str(test_list))
 # 2  вариант
 
 import random
-lst = [random.randint(0,10) for i in range(random.randint(5,20))]
-print(f"исходный список:\n {lst}")
+lst = [random.randint(5,15) for i in range(random.randint(10,20))]
+print(f"Исходный список:\n {lst}")
 random.shuffle(lst)
-print(f"список после перемешивания:\n{lst}")
+print(f"Список после перемешивания:\n{lst}")
