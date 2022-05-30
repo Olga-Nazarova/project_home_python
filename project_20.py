@@ -1,15 +1,30 @@
 # Определить, присутствует ли в заданном списке строк, некоторое число
 import random
-def check(lines, number):
-    count = 0
-    for i in lines:
-        if int(i) == number: count += 1
-    print(f'Число {number} присутствует в списке строк {count} раз')
+def check_number_in_string(string):
+    strings = string.split(" ")
+    strings = list(filter(None, strings))
 
-lst = [random.randint(5, 15) for i in range(random.randint(10, 20))]
-lines = [str(x) for x in lst]
-num = random.randint(5, 15)
-print(f'Загаданное число: {num}')
-print(f'Список строк: {lines}')
+    print(f'Задана строка "{strings}"')
 
-check(lines, num)
+    result = []
+    basic = ""
+    for i in strings:
+        for j in i:
+            if j.isnumeric():
+                basic += j
+        result.append(basic)
+        basic = ""
+
+    result = list(filter(None, result))
+    result = [int(x) for x in result]
+    if result != []:
+        print(f'В строке "{string}" есть цифры {result}\n')
+    else:
+        print(f'В строке "{string}" нет цифр\n')
+
+
+string1 = "Аппаувмы123 аива5 1234и ывмыв фыВАп"
+string2 = "Аппаувмы аива и ывмыв фыВАп"
+
+check_number_in_string(string1)
+check_number_in_string(string2)
